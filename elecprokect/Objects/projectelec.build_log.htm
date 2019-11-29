@@ -1,0 +1,120 @@
+<html>
+<body>
+<pre>
+<h1>µVision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: µVision V5.24.2.0
+Copyright (C) 2017 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: Konstantin Dragostinov, University of Leeds, LIC=----
+ 
+Tool Versions:
+Toolchain:       MDK-Lite  Version: 5.24.1
+Toolchain Path:  C:\Keil_v5\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.06 update 5 (build 528)
+Assembler:       Armasm.exe V5.06 update 5 (build 528)
+Linker/Locator:  ArmLink.exe V5.06 update 5 (build 528)
+Library Manager: ArmAr.exe V5.06 update 5 (build 528)
+Hex Converter:   FromElf.exe V5.06 update 5 (build 528)
+CPU DLL:         SARMCM3.DLL V5.24.1
+Dialog DLL:      DCM.DLL V1.16.0.0
+Target DLL:      lmidk-agdi.dll V???
+Dialog DLL:      TCM.DLL V1.32.0.0
+ 
+<h2>Project:</h2>
+C:\Users\KonstantinDragostino\Desktop\elecprokect\projectelec.uvprojx
+Project File Date:  12/01/2017
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.06 update 5 (build 528)', folder: 'C:\Keil_v5\ARM\ARMCC\Bin'
+Rebuild target 'Target 1'
+assembling startup_TM4C123.s...
+compiling Keypad.c...
+Keypad.c(37): warning:  #550-D: variable "delay"  was set but never used
+  	unsigned long delay;
+Keypad.c(76): warning:  #1-D: last line of file ends without a newline
+  }
+Keypad.c: 2 warnings, 0 errors
+compiling UART.c...
+compiling PLL.c...
+PLL.c(43): warning:  #1-D: last line of file ends without a newline
+  }
+PLL.c: 1 warning, 0 errors
+compiling LCD.c...
+LCD.c(36): warning:  #550-D: variable "delay"  was set but never used
+  	unsigned long delay;
+LCD.c(143): warning:  #1-D: last line of file ends without a newline
+  }            
+LCD.c: 2 warnings, 0 errors
+compiling main.c...
+main.c(51): warning:  #1295-D: Deprecated declaration readKeypad - give arg types
+  char readKeypad(); //return input from the keypad
+main.c(56): warning:  #1295-D: Deprecated declaration longDelay - give arg types
+  void longDelay(); //A few seconds delay
+main.c(309): warning:  #111-D: statement is unreachable
+         return answer; answer=0; //Return & Reset answerwer
+main.c(336): warning:  #1-D: last line of file ends without a newline
+  }
+main.c: 4 warnings, 0 errors
+compiling system_TM4C123.c...
+RTE\Device\TM4C123GH6PM\system_TM4C123.c(421): warning:  #61-D: integer operation result is out of range
+  uint32_t SystemCoreClock = 
+_CORE_CLK;  /*!< System Clock Frequency (Core Clock)*/
+RTE\Device\TM4C123GH6PM\system_TM4C123.c(591): warning:  #61-D: integer operation result is out of range
+      
+YSCTL->RCC2 = (
+CC2_Val | (1UL<<11) | (1UL<<13));              /* set value with BYPASS, PWRDN set */
+RTE\Device\TM4C123GH6PM\system_TM4C123.c(595): warning:  #61-D: integer operation result is out of range
+      
+YSCTL->RCC2 = (
+CC2_Val | (1UL<<11));                          /* set value with BYPASS */
+RTE\Device\TM4C123GH6PM\system_TM4C123.c(600): warning:  #61-D: integer operation result is out of range
+      if ( (((
+CC_Val  & (1UL<<13)) == 0) && ((
+CC2_Val & (1UL<<31)) == 0)) ||
+RTE\Device\TM4C123GH6PM\system_TM4C123.c(601): warning:  #61-D: integer operation result is out of range
+           (((
+CC2_Val & (1UL<<13)) == 0) && ((RCC2_Val & (1UL<<31)) != 0))   ) {
+RTE\Device\TM4C123GH6PM\system_TM4C123.c(601): warning:  #61-D: integer operation result is out of range
+           (((
+CC2_Val & (1UL<<13)) == 0) && ((
+CC2_Val & (1UL<<31)) != 0))   ) {
+RTE\Device\TM4C123GH6PM\system_TM4C123.c(606): warning:  #61-D: integer operation result is out of range
+      
+YSCTL->RCC2 = (
+CC2_Val);                                      /* set value */
+RTE\Device\TM4C123GH6PM\system_TM4C123.c: 7 warnings, 0 errors
+linking...
+Program Size: Code=22444 RO-data=1548 RW-data=96 ZI-data=992  
+".\Objects\projectelec.axf" - 0 Error(s), 16 Warning(s).
+
+<h2>Software Packages used:</h2>
+
+Package Vendor: ARM
+                http://www.keil.com/pack/ARM.CMSIS.5.0.1.pack
+                ARM.CMSIS.5.0.1
+                CMSIS (Cortex Microcontroller Software Interface Standard)
+   * Component: CORE Version: 5.0.1
+
+Package Vendor: Keil
+                http://www.keil.com/pack/Keil.TM4C_DFP.1.1.0.pack
+                Keil.TM4C_DFP.1.1.0
+                Texas Instruments Tiva C Series Device Support and Examples
+   * Component: Startup Version: 1.0.1
+
+<h2>Collection of Component include folders:</h2>
+  .\RTE\_Target_1
+  C:\Keil_v5\ARM\PACK\ARM\CMSIS\5.0.1\CMSIS\Include
+  C:\Keil_v5\ARM\PACK\Keil\TM4C_DFP\1.1.0\Device\Include\TM4C123
+
+<h2>Collection of Component Files used:</h2>
+
+   * Component: Keil::Device:Startup:1.0.1
+      Source file:   Device\Source\ARM\startup_TM4C123.s
+      Source file:   Device\Source\system_TM4C123.c
+      Include file:  Device\Include\TM4C123\TM4C123.h
+
+   * Component: ARM::CMSIS:CORE:5.0.1
+Build Time Elapsed:  00:00:00
+</pre>
+</body>
+</html>
