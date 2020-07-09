@@ -12,9 +12,8 @@ For doing I had to first implement the hardware connections and then write the s
 
 You can read the full report on how I did this project and the design specification and choices on [this PDF of the repository](https://github.com/Randulfe/C-Calculator-for-LCD-Keypad/blob/master/ELEC3662_GROUP_10.pdf)
 
-![Photo of the actual circuit](https://github.com/Randulfe/C-Calculator-for-LCD-Keypad/blob/master/foto.jpg)
-
-![Circuit diagram](https://github.com/Randulfe/C-Calculator-for-LCD-Keypad/blob/master/imagen2.jpg)
+<img src="https://github.com/Randulfe/C-Calculator-for-LCD-Keypad/blob/master/foto.jpg" width="600px"> 
+<img src="https://github.com/Randulfe/C-Calculator-for-LCD-Keypad/blob/master/imagen2.jpg" width="500px">
 
 ### Instructions
 
